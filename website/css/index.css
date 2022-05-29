@@ -1,0 +1,298 @@
+body {
+	background-color: rgba(20, 22, 22, 0.918);
+	margin: auto;
+}
+
+h1 {
+	color: rgb(255, 255, 255);
+	width:500px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+p {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 15px;
+	color: rgb(255, 255, 255);
+}
+
+h2 {
+	text-align: center;
+	color: rgb(255, 255, 255);
+	text-decoration-line: underline;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #474747;
+	overflow: auto;
+	position: sticky;
+	top: 0;
+	border-right: 1px solid #fffafa;
+	text-align: center;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: inline-block;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration-line: none;
+}
+
+li:last-child {
+	border-right: none;
+}
+
+li a:hover {
+	background-color: #4d3b3b;
+}
+
+.active {
+	background-color: #636363;
+}
+
+.link {
+	color: rgb(151, 109, 230);
+	text-decoration: none;
+}
+
+.homepage {
+	padding: 0px 70px 0px 70px;
+}
+
+.space {
+	padding: 10px;
+}
+
+.column {
+	float: left;
+	width: 25%;
+	padding: 1px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*JAVASCRIPT MENU ICON START*/
+.container {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*JAVASCRIPT MENU ICON END*/
+@media screen and (max-width: 800px) {
+	img {
+		height: 75px;
+		width: 125px;
+	}
+
+	.column {
+		float: left;
+		width: 15%;
+		padding: 0.5px;
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: stretch;
+	}
+
+	.row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	p {
+		font-size: 17px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	li {
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.row>.column {
+	padding: 0 8px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+	float: left;
+	width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 13px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* Caption text */
+.caption-container {
+	text-align: center;
+	background-color: black;
+	padding: 2px 16px;
+	color: white;
+}
+
+img.demo {
+	opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}
+
+img.hover-shadow {
+	transition: 0.3s;
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

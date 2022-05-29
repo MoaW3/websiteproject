@@ -1,0 +1,149 @@
+body {
+    background-color: rgba(32, 32, 32, 0.918);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color:  #dc143c;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #FFFAFA;
+}
+
+
+h1 {
+    color: rgb(255, 72, 102);
+    text-align: center;
+    text-decoration: underline;
+}
+p {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: rgb(247, 95, 95);
+}
+h2 {
+    text-align: center;
+    color:rgba(255, 79, 108, 0.733);
+    text-decoration-line: underline;
+}
+
+
+li {
+    float: left;
+}
+li a {
+    display: inline-block;
+    color: rgb(255, 161, 161);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li:last-child {
+    border-right: none;
+}
+
+
+li a:hover {
+    background-color: #eb1064;
+}
+
+.active {
+    background-color: #f300b6;
+}
+
+
+.link {
+    color: rgb(255, 108, 108);
+    text-decoration: none;
+}
+
+
+.homepage {
+    padding: 0px 70px 0px 70px;
+}
+
+
+dl {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: rgb(255, 86, 114);  
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    font-style: italic;
+}
+
+
+.columns {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 45px;
+    height: 5px;
+    background-color: rgb(80, 0, 0);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+@media screen and (max-width: 600px) {
+    img {
+        display: none;
+    }
+    .middlecolumn {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 9;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 17px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    li {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
